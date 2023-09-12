@@ -15,6 +15,12 @@ My application use the following libraries:
 - jsonwebtoken from npm for working with JWTs
 - jasmine from npm for testing
 - cors for security
+- Access token and refresh token for user signing in
+- passport-google-oauth20 for signing in with google account
+- multer for adding images of products and user profile image
+- ejs template engine to handle front end
+- nodemailer for sending email when user signup, place order and sending messages
+- winston for handling logs of the server and the database
 
 ### Installing
 
