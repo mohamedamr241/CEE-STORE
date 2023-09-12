@@ -18,7 +18,10 @@ My application use the following libraries:
 
 ### Installing
 
-Run this command for dependency managment: npm i
+Run this command for dependency managment
+```bash
+npm i
+```
 
 -To run server: npm run start
 -To build the project: npm run build
@@ -31,10 +34,22 @@ We start first by installing pg and dotenv using npm and then creating .env file
 
 ## setup and connect to the database
 
-- installing Pool: npm i Pool
-- create two databases: first: production , second: testing (CREATE DATABASE (databasename))
-- download db-migrate package: npm i db-migrate
-- then run migrations: db-migrate env dev up
+- installing Pool
+```bash
+npm i Pool
+```
+- create two databases: first: production , second: testing 
+```bash
+CREATE DATABASE (databasename)
+```
+- download db-migrate package
+```bash
+npm i db-migrate
+```
+- then run migrations
+```bash
+db-migrate env dev up
+```
 
 - first we import all the senstive data from .env file like host, database name, user and env state, then we create client using pool package (npm i Pool) -> let client: Pool = new Pool();
   and then by checking that ENV variable is dev for developer or test for testing and then create a connection with the database by assigning to the client:Pool host,database,user,password of the database which are determined in database.json
