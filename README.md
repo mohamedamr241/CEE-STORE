@@ -2,7 +2,14 @@
 
 ## Getting Started
 
-This repo contains a basic Node and Express app to get you started in constructing an API. To get started: run npm in the terminal
+- This is CEE STORE fullstack web application, this app is responsive design, it implements node, typeScript, postgreSQL, jasmine and ejs.
+- The app has normal users and admins, when user signup he recieves confirmation email.
+- The user can sign in with google account.
+- The user can change his profile image.
+- Admin can add products to the store using admin dashboard.
+- This app sells products, user can add product to cart and place the order, then he will recieve email of the bill.
+- User can see this current orders and completed orders from profile
+- User can send message to the support team in contact-us.
 
 ## Technologies used
 
