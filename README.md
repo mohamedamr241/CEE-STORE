@@ -13,7 +13,8 @@
 
 ![2](https://github.com/mohamedamr241/CEE-STORE/assets/81832292/f52fd469-e24e-40b3-aafd-4f25aae6dc7f)
 
-![1](https://github.com/mohamedamr241/CEE-STORE/assets/81832292/11a6d853-c505-40f9-8ee8-b4a4a23e6d24)
+![1](https://github.com/mohamedamr241/CEE-STORE/assets/81832292/62ede9df-8d95-4130-951e-f149a9f1e7af)
+
 ## Technologies used
 
 My application use the following libraries:
