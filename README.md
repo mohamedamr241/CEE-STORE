@@ -93,3 +93,25 @@ DB_PORT=5432
 PORT=8000
 ```
 
+## REDIS
+
+- This app use redis for storing some user data so you should first go and install redis from this link 
+```bash
+https://github.com/microsoftarchive/redis/releases
+```
+- Install redis package
+```bash
+npm i redis
+```
+
+- Add this code for configuration of redis
+```bash
+import { createClient } from 'redis';
+const redisClient = createClient();
+
+redisClient.on('error', err => console.log('Redis Client Error', err));
+
+const conn = async()=>{
+    await redisClient.connect();
+}
+```
