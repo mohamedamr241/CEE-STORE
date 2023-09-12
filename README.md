@@ -1,4 +1,4 @@
-# Storefront Backend Project
+# FULL STACK WEB PROJECT
 
 ## Getting Started
 
