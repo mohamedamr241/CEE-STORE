@@ -36,7 +36,22 @@ npm i
 ### the environment
 
 We start first by installing pg and dotenv using npm and then creating .env file to put in it all the senstive information to be hidden and including .env in .gitignore.
-
+```bash
+POSTGRES_HOST
+POSTGRES_DB
+POSTGRES_DB_TEST
+DB_PASSWORD
+DB_USERNAME
+ENV=dev
+PEPPER
+SALT_ROUND
+TOKEN_SECRET
+REFRESH_TOKEN
+EMAIL
+EMAIL_PASSWORD
+GOOGLE_CLIENT_ID
+GOOGLE_CLIENT_SECRET
+```
 
 ## setup and connect to the database
 
