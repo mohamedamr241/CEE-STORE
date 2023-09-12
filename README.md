@@ -10,6 +10,10 @@
 - This app sells products, user can add product to cart and place the order, then he will recieve email of the bill.
 - User can see this current orders and completed orders from profile
 - User can send message to the support team in contact-us.
+- Video demo for project
+```bash
+https://drive.google.com/file/d/198PEaNpF93_dsQgnXrUixAYP7vbnEJaL/view?usp=sharing
+```
 
 ![2](https://github.com/mohamedamr241/CEE-STORE/assets/81832292/f52fd469-e24e-40b3-aafd-4f25aae6dc7f)
 
