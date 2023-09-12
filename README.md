@@ -36,9 +36,18 @@ Run this command for dependency managment
 npm i
 ```
 
--To run server: npm run start
--To build the project: npm run build
--To run test:npm run test
+-To run server
+```bash
+npm run start
+```
+-To build the project
+```bash
+npm run build
+```
+-To run test
+```bash
+npm run test
+```
 
 ### the environment
 
