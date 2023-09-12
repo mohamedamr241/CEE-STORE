@@ -11,6 +11,7 @@
 - User can see this current orders and completed orders from profile
 - User can send message to the support team in contact-us.
 
+![1](https://github.com/mohamedamr241/CEE-STORE/assets/81832292/8d130a23-e3e5-4629-8b7a-724f887cd281)
 ## Technologies used
 
 My application use the following libraries:
