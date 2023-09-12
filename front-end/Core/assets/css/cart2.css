@@ -1,0 +1,12 @@
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    margin-bottom: 60px;
+}
+#sbmt{
+    background-color: #212529;
+    color: aliceblue;
+}

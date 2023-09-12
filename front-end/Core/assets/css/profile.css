@@ -1,0 +1,96 @@
+#username{
+    margin-left: 5%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline;
+}
+#first{
+    float: left;
+}
+#second{
+    float: right;
+}
+.fa-user{
+    font-size: 20px;
+}
+.fa-envelope{
+    font-size: 20px;
+
+}
+#email{
+    margin-left: 2%;
+    display: inline;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+@media (max-width: 780px) {
+    #username{
+        font-size: 14px;
+    }
+    #email{
+        font-size: 14px;
+    }
+    .fa-user{
+        font-size: 14px;
+    }
+    .fa-envelope{
+        font-size: 14px;
+    
+    }
+} 
+
+.upload {
+    width: 200px;
+    position: relative;
+    margin: auto;
+    top:80%
+  }
+  
+  .upload img {
+    border-radius: 50%;
+    border: 6px solid #04080a;
+  }
+  
+  .upload .round {
+    position: absolute;
+    bottom: 0;
+    left:20%;
+    background: #04080a;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .upload .round i {
+    pointer-events: none; /* Prevent the camera icon from capturing clicks */
+  }
+  
+  .upload input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .camera-icon {
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  input[type=file]::-webkit-file-upload-button {
+    cursor: pointer;
+  }
+
+@media (min-width: 768.89px) and (max-width: 992px) {
+    .upload{
+        top:65%;
+    }
+}

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link
+      rel="icon"
+      href="http://localhost:8000/emailImage/CEESTORE 2.png"
+      type="image/x-icon"
+      sizes="128x128"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Cee Store</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-sixteen.css" />
+    <link rel="stylesheet" href="assets/css/products.css" />
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div class="jumper">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="http://localhost:8000/main/home"
+            ><h2>Cee <em>Store</em></h2></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="http://localhost:8000/main/home"
+                  >Add product
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a id="logout" class="nav-link">Log out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <form method="" id="product-form" enctype="multipart/form-data">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <div class="upload">
+                <input type="file" id="file-input" name="image" />
+                <label for="file-input" class="camera-icon">
+                  <img
+                    src="assets/images/addproduct1.png"
+                    width="100"
+                    height="100"
+                    alt=""
+                  />
+                  <div class="round">
+                    <i class="fa fa-camera" style="color: #fff"></i>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <div class="input-box">
+                <label for="Product_name"
+                  ><b>Product Name<span class="red-asterisk"></span> </b
+                ></label>
+
+                <input
+                  type="text"
+                  placeholder="Enter Product Name"
+                  name="name"
+                  id="p_name"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <label for="price"
+                  ><b>Price<span class="red-asterisk"></span> </b
+                ></label>
+
+                <input
+                  type="text"
+                  placeholder="Enter Price"
+                  name="price"
+                  id="price"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <label for="quantity"
+                  ><b>Quantity<span class="red-asterisk"></span> </b
+                ></label>
+
+                <input
+                  type="text"
+                  placeholder="Enter Quantity"
+                  name="quantity"
+                  id="quantity"
+                  required
+                />
+              </div>
+              <div class="input-box">
+                <label for="description"
+                  ><b>Description<span class="red-asterisk"></span> </b
+                ></label>
+
+                <input
+                  type="text"
+                  placeholder="Enter Description"
+                  name="description"
+                  id="Description"
+                  required
+                />
+              </div>
+              <div class="input-boxex">
+                <label for="rating"
+                  ><b>Category<span class="red-asterisk"></span> </b
+                ></label>
+                <select name="cars" id="images" name="category">
+                  <option>Trousers</option>
+                  <option>T-shirts</option>
+                  <option>Shirts</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button id="submit" class="form-submit">Add product</button>
+              </div>
+              <div id="status"></div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+              <div class="inner-content">
+                <p style="color: black">
+                  Copyright &copy; 2023 CEE Store Co., Ltd.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/logout.js"></script>
+    <script src="assets/js/addproduct.js"></script>
+    <script language="text/Javascript">
+      cleared[0] = cleared[1] = cleared[2] = 0;
+      function clearField(t) {
+        if (!cleared[t.id]) {
+          cleared[t.id] = 1;
+          t.value = "";
+          t.style.color = "#fff";
+        }
+      }
+    </script>
+  </body>
+</html>

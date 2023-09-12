@@ -1,0 +1,56 @@
+{"level":"error","message":"error in showing username in model: Error: timeout exceeded when trying to connect","timestamp":"2023-08-22T11:01:39.283Z"}
+{"level":"error","message":"error in loggin in controller: Error: user login error in Models: Error: timeout exceeded when trying to connect","timestamp":"2023-08-22T11:01:39.283Z"}
+{"level":"error","message":"error in signin user routes: Error: loggin in controller: Error: user login error in Models: Error: timeout exceeded when trying to connect","timestamp":"2023-08-22T11:01:39.283Z"}
+{"level":"error","message":"error in showing username in model: Error: timeout exceeded when trying to connect","timestamp":"2023-08-22T11:01:45.398Z"}
+{"level":"error","message":"error in loggin in controller: Error: user login error in Models: Error: timeout exceeded when trying to connect","timestamp":"2023-08-22T11:01:45.398Z"}
+{"level":"error","message":"error in signin user routes: Error: loggin in controller: Error: user login error in Models: Error: timeout exceeded when trying to connect","timestamp":"2023-08-22T11:01:45.398Z"}
+{"level":"error","message":"error adding cart in route","timestamp":"2023-08-24T12:34:55.577Z"}
+{"level":"error","message":"error adding product to cart in model","timestamp":"2023-08-25T13:01:40.238Z"}
+{"level":"error","message":"error in adding product to cart in controller","timestamp":"2023-08-25T13:01:40.238Z"}
+{"level":"error","message":"error adding product to cart in route","timestamp":"2023-08-25T13:01:40.239Z"}
+{"level":"error","message":"error adding product to cart in model","timestamp":"2023-08-25T13:03:24.988Z"}
+{"level":"error","message":"error in adding product to cart in controller","timestamp":"2023-08-25T13:03:24.988Z"}
+{"level":"error","message":"error adding product to cart in route","timestamp":"2023-08-25T13:03:24.988Z"}
+{"level":"error","message":"error adding product to cart in model","timestamp":"2023-08-25T13:04:09.783Z"}
+{"level":"error","message":"error in adding product to cart in controller","timestamp":"2023-08-25T13:04:09.784Z"}
+{"level":"error","message":"error adding product to cart in route","timestamp":"2023-08-25T13:04:09.784Z"}
+{"level":"error","message":"error adding product to cart in model","timestamp":"2023-08-25T13:04:21.900Z"}
+{"level":"error","message":"error in adding product to cart in controller","timestamp":"2023-08-25T13:04:21.901Z"}
+{"level":"error","message":"error adding product to cart in route","timestamp":"2023-08-25T13:04:21.901Z"}
+{"level":"error","message":"error adding product to cart in model","timestamp":"2023-08-25T13:13:57.929Z"}
+{"level":"error","message":"error in adding product to cart in controller","timestamp":"2023-08-25T13:13:57.929Z"}
+{"level":"error","message":"error adding product to cart in route","timestamp":"2023-08-25T13:13:57.930Z"}
+{"level":"error","message":"error adding product to cart in model","timestamp":"2023-08-25T13:15:25.421Z"}
+{"level":"error","message":"error in adding product to cart in controller","timestamp":"2023-08-25T13:15:25.421Z"}
+{"level":"error","message":"error adding product to cart in route","timestamp":"2023-08-25T13:15:25.421Z"}
+{"level":"error","message":"error in getting orders in model: error: column orders.product_id does not exist","timestamp":"2023-08-25T21:33:50.457Z"}
+{"level":"error","message":"error in showing orders dashboard controller: Error: show orders error in models: error: column orders.product_id does not exist","timestamp":"2023-08-25T21:33:50.458Z"}
+{"level":"error","message":"error in showing current order in routes: Error: show completed orders of user error in controller: Error: show orders error in models: error: column orders.product_id does not exist","timestamp":"2023-08-25T21:33:50.458Z"}
+{"level":"error","message":"error in creating order model: error: invalid input syntax for type integer: \"€ 2402\"","timestamp":"2023-08-26T13:06:54.467Z"}
+{"level":"error","message":"error in creating order controller: Error: create order error in models: error: invalid input syntax for type integer: \"€ 2402\"","timestamp":"2023-08-26T13:06:54.468Z"}
+{"level":"error","message":"error in creating order model: error: invalid input syntax for type integer: \"€ 2402\"","timestamp":"2023-08-26T13:09:07.009Z"}
+{"level":"error","message":"error in creating order controller: Error: create order error in models: error: invalid input syntax for type integer: \"€ 2402\"","timestamp":"2023-08-26T13:09:07.009Z"}
+{"level":"error","message":"error in creating order model: error: invalid input syntax for type integer: \"€ 2402\"","timestamp":"2023-08-26T13:09:12.078Z"}
+{"level":"error","message":"error in creating order controller: Error: create order error in models: error: invalid input syntax for type integer: \"€ 2402\"","timestamp":"2023-08-26T13:09:12.078Z"}
+{"level":"error","message":"error in getting orders in model: error: column orders.product_id does not exist","timestamp":"2023-08-26T14:00:59.477Z"}
+{"level":"error","message":"error in showing orders dashboard controller: Error: show orders error in models: error: column orders.product_id does not exist","timestamp":"2023-08-26T14:00:59.477Z"}
+{"level":"error","message":"error in showing current order in routes: Error: show completed orders of user error in controller: Error: show orders error in models: error: column orders.product_id does not exist","timestamp":"2023-08-26T14:00:59.478Z"}
+{"level":"error","message":"error getting cart id in model","timestamp":"2023-08-27T14:00:17.727Z"}
+{"level":"error","message":"error in getting cart id in controller","timestamp":"2023-08-27T14:00:17.728Z"}
+{"level":"error","message":"error adding product to cart in route","timestamp":"2023-08-27T14:00:17.728Z"}
+{"level":"error","message":"error getting cart id in model","timestamp":"2023-08-27T14:00:19.994Z"}
+{"level":"error","message":"error in getting cart id in controller","timestamp":"2023-08-27T14:00:19.994Z"}
+{"level":"error","message":"error getting product from cart in route","timestamp":"2023-08-27T14:00:19.994Z"}
+{"level":"error","message":"error getting cart id in model","timestamp":"2023-08-27T14:00:23.139Z"}
+{"level":"error","message":"error in getting cart id in controller","timestamp":"2023-08-27T14:00:23.140Z"}
+{"level":"error","message":"error getting product from cart in route","timestamp":"2023-08-27T14:00:23.140Z"}
+{"level":"error","message":"error getting cart id in model","timestamp":"2023-08-27T14:00:27.450Z"}
+{"level":"error","message":"error in getting cart id in controller","timestamp":"2023-08-27T14:00:27.450Z"}
+{"level":"error","message":"error adding product to cart in route","timestamp":"2023-08-27T14:00:27.450Z"}
+{"level":"error","message":"error getting cart id in model","timestamp":"2023-08-27T14:00:31.823Z"}
+{"level":"error","message":"error in getting cart id in controller","timestamp":"2023-08-27T14:00:31.824Z"}
+{"level":"error","message":"error getting product from cart in route","timestamp":"2023-08-27T14:00:31.824Z"}
+{"level":"error","message":"error getting cart id in model","timestamp":"2023-08-27T14:00:37.686Z"}
+{"level":"error","message":"error in getting cart id in controller","timestamp":"2023-08-27T14:00:37.686Z"}
+{"level":"error","message":"error adding product to cart in route","timestamp":"2023-08-27T14:00:37.687Z"}
+{"level":"error","message":"login failed routes","timestamp":"2023-09-11T16:14:07.701Z"}

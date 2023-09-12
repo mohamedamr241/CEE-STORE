@@ -1,0 +1,104 @@
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
+}
+@media (min-width: 1200px) {
+    input[type="number"] {
+        width: 60px; 
+    }
+}  
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #110d0d, #4c4944, #9b9792);
+
+    background-size: 600% 600%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+    
+.card-registration .select-arrow {
+    top: 13px;
+}
+    
+.bg-grey {
+    background-color: #d2d0d0;
+}
+    
+@media (min-width: 992px) {
+    .card-registration-2 .bg-grey {
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+}
+    
+@media (max-width: 991px) {
+    .card-registration-2 .bg-grey {
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+}
+
+i{
+    background: linear-gradient(45deg, #4e4d4d, #4e4d4d);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+#form3Examplea2:active{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(0, 0, 0, 0.822);
+
+}
+#form3Examplea2:hover{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(0, 0, 0, 0.822);
+
+}
+#form3Examplea2:focus{
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(0, 0, 0, 0.822);
+
+}
+#delivery-select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    width: 100%;
+    max-width: 250px; /* Adjust the maximum width as needed */
+}
+#delivery-select:hover{
+    border: 2px solid #333;
+}
+
+/* Style the select's options */
+#delivery-select option {
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+}
+input[type="number"] {
+    -webkit-appearance: textfield; /* WebKit browsers (Chrome, Safari) */
+    -moz-appearance: textfield; /* Mozilla Firefox */
+    appearance: textfield; /* Remove the default spinner appearance */
+  }

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="http://localhost:8000/emailImage/CEESTORE 2.png"
+      type="image/x-icon"
+      sizes="128x128"
+    />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-sixteen.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/cart.css" />
+    <link rel="stylesheet" href="assets/css/cart2.css" />
+  </head>
+  <body>
+    <div id="preloader">
+      <div class="jumper">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="http://localhost:8000/main/home"
+            ><h2>CEE <em>Store</em></h2></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto" id="nav-items-list">
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8000/main/home"
+                  >Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8000/main/products"
+                  >Our Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8000/main/profile"
+                  >Profile</a
+                >
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="http://localhost:8000/main/cart"
+                  >Cart</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8000/main/about"
+                  >About Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8000/main/contact"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="nav-item">
+                <a id="logout" class="nav-link">Log out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="h-100 h-custom">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12">
+            <div
+              class="card card-registration card-registration-2"
+              style="border-radius: 15px"
+            >
+              <div class="card-body p-0">
+                <div class="row g-0">
+                  <div class="col-lg-8">
+                    <div class="p-5" id="tar">
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-5"
+                      >
+                        <h1 class="fw-bold mb-0 text-black">Shopping Cart</h1>
+                        <h6 class="mb-0 text-muted" id="numOfOrders"></h6>
+                      </div>
+
+                      <div class="pt-5" id="end">
+                        <h6 class="mb-0">
+                          <a
+                            href="http://localhost:8000/main/home"
+                            class="text-body"
+                            ><i class="fas fa-long-arrow-alt-left me-2"></i>Back
+                            to shop</a
+                          >
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 bg-grey" id="summary">
+                    <div class="p-5">
+                      <h3 class="fw-bold mb-5 mt-2 pt-1">Summary</h3>
+                      <hr class="my-4" />
+
+                      <div class="d-flex justify-content-between mb-4">
+                        <h5 class="text-uppercase" id="anotherNum"></h5>
+                        <h5 id="totalPrice"></h5>
+                      </div>
+
+                      <h5 class="text-uppercase mb-3">Shipping</h5>
+
+                      <div class="mb-4 pb-2">
+                        <select class="select" id="delivery-select">
+                          <option value="1">Standard-Delivery- €5.00</option>
+                        </select>
+                      </div>
+
+                      <h5 class="text-uppercase mb-3">Give code</h5>
+
+                      <div class="mb-5">
+                        <div class="form-outline">
+                          <input
+                            type="text"
+                            id="form3Examplea2"
+                            class="form-control form-control-lg"
+                          />
+                          <label class="form-label" for="form3Examplea2"
+                            >Enter your code</label
+                          >
+                        </div>
+                      </div>
+
+                      <hr class="my-4" />
+
+                      <div class="d-flex justify-content-between mb-5">
+                        <h5 class="text-uppercase">Total price</h5>
+                        <h5 id="finalPrice"></h5>
+                      </div>
+
+                      <button
+                        type="button"
+                        id="sbmt"
+                        class="btn btn-block btn-lg"
+                      >
+                        Register
+                      </button>
+                      <div id="err"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/accordions.js"></script>
+    <script src="assets/js/logout.js"></script>
+    <script src="assets/js/cart.js"></script>
+
+    <script language="text/Javascript">
+      cleared[0] = cleared[1] = cleared[2] = 0;
+      function clearField(t) {
+        if (!cleared[t.id]) {
+          cleared[t.id] = 1;
+          t.value = "";
+          t.style.color = "#fff";
+        }
+      }
+    </script>
+  </body>
+</html>
