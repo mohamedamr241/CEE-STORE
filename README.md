@@ -173,16 +173,21 @@ const conn = async()=>{
 ```
 ## IMAGE DEMO
 - Products
+
 ![3](https://github.com/mohamedamr241/CEE-STORE/assets/81832292/742b831f-664a-48d0-954a-41b75edfd4d5)
 
 - Cart
+  
 ![4](https://github.com/mohamedamr241/CEE-STORE/assets/81832292/03a1f450-7971-4ec9-b7b1-c9f9f48cb8ee)
 
 - Profile
+  
 ![5](https://github.com/mohamedamr241/CEE-STORE/assets/81832292/6e5a791d-d961-49c9-a62d-3f1072d51de5)
 
 - Contact Us
+  
 ![6](https://github.com/mohamedamr241/CEE-STORE/assets/81832292/77c04286-c2f8-44ca-a5fb-21b19d886f6d)
 
 - Admin add product
+  
 ![7](https://github.com/mohamedamr241/CEE-STORE/assets/81832292/1821f670-b258-413a-a351-1f5d70395c0f)
