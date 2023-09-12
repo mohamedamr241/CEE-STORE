@@ -2,53 +2,94 @@
 
 ## Getting Started
 
-This repo contains a basic Node and Express app to get you started in constructing an API. To get started, clone this repo and run `yarn` in your terminal at the project root.
+This repo contains a basic Node and Express app to get you started in constructing an API. To get started: run npm in the terminal
 
-## Required Technologies
-Your application must make use of the following libraries:
+## Technologies used
+
+My application use the following libraries:
+
 - Postgres for the database
 - Node/Express for the application logic
 - dotenv from npm for managing environment variables
 - db-migrate from npm for migrations
 - jsonwebtoken from npm for working with JWTs
 - jasmine from npm for testing
+- cors for security
 
-## Steps to Completion
+### Installing
 
-### 1. Plan to Meet Requirements
+Run this command for dependency managment: npm i
 
-In this repo there is a `REQUIREMENTS.md` document which outlines what this API needs to supply for the frontend, as well as the agreed upon data shapes to be passed between front and backend. This is much like a document you might come across in real life when building or extending an API. 
+-To run server: npm run start
+-To build the project: npm run build
+-To run test:npm run test
 
-Your first task is to read the requirements and update the document with the following:
-- Determine the RESTful route for each endpoint listed. Add the RESTful route and HTTP verb to the document so that the frontend developer can begin to build their fetch requests.    
-**Example**: A SHOW route: 'blogs/:id' [GET] 
+### the environment
 
-- Design the Postgres database tables based off the data shape requirements. Add to the requirements document the database tables and columns being sure to mark foreign keys.   
-**Example**: You can format this however you like but these types of information should be provided
-Table: Books (id:varchar, title:varchar, author:varchar, published_year:varchar, publisher_id:string[foreign key to publishers table], pages:number)
+We start first by installing pg and dotenv using npm and then creating .env file to put in it all the senstive information to be hidden and including .env in .gitignore.
 
-**NOTE** It is important to remember that there might not be a one to one ratio between data shapes and database tables. Data shapes only outline the structure of objects being passed between frontend and API, the database may need multiple tables to store a single shape. 
 
-### 2.  DB Creation and Migrations
+## setup and connect to the database
 
-Now that you have the structure of the databse outlined, it is time to create the database and migrations. Add the npm packages dotenv and db-migrate that we used in the course and setup your Postgres database. If you get stuck, you can always revisit the database lesson for a reminder. 
+- installing Pool: npm i Pool
+- create two databases: first: production , second: testing (CREATE DATABASE (databasename))
+- download db-migrate package: npm i db-migrate
+- then run migrations: db-migrate env dev up
 
-You must also ensure that any sensitive information is hashed with bcrypt. If any passwords are found in plain text in your application it will not pass.
+- first we import all the senstive data from .env file like host, database name, user and env state, then we create client using pool package (npm i Pool) -> let client: Pool = new Pool();
+  and then by checking that ENV variable is dev for developer or test for testing and then create a connection with the database by assigning to the client:Pool host,database,user,password of the database which are determined in database.json
 
-### 3. Models
+  ```json
+  {
+    "dev": {
+      "driver": "pg",
+      "host": {
+        "ENV": "POSTGRES_HOST"
+      },
+      "database": {
+        "ENV": "POSTGRES_DB"
+      },
+      "user": {
+        "ENV": "POSTGRES_USER"
+      },
+      "password": {
+        "ENV": "POSTGRES_PASSWORD"
+      }
+    },
+    "test": {
+      "driver": "pg",
+      "host": {
+        "ENV": "POSTGRES_HOST"
+      },
+      "database": {
+        "ENV": "POSTGRES_TEST_DB"
+      },
+      "user": {
+        "ENV": "POSTGRES_USER"
+      },
+      "password": {
+        "ENV": "POSTGRES_PASSWORD"
+      }
+    }
+  }
+  ```
 
-Create the models for each database table. The methods in each model should map to the endpoints in `REQUIREMENTS.md`. Remember that these models should all have test suites and mocks.
+  - we have two databases: production this is for development and can be connected by running npm run start and production and testing is for testing and can be connected to by running npm run test.
 
-### 4. Express Handlers
+  - as we see here there is a development database and testing database if you are running the server using npm run start development database will be connected but if you run npm run test then testing database will be connected.
 
-Set up the Express handlers to route incoming requests to the correct model method. Make sure that the endpoints you create match up with the enpoints listed in `REQUIREMENTS.md`. Endpoints must have tests and be CORS enabled. 
+  - after connecting to the database you should run the migration up (db-migrate up) to create the tables in the database.
 
-### 5. JWTs
+By following this steps you have successfully connected to the database for development or for testing and the next step is creating your tables and migrating them in the database or run the tests (testing with jasmine).
 
-Add JWT functionality as shown in the course. Make sure that JWTs are required for the routes listed in `REQUIUREMENTS.md`.
+## ports
 
-### 6. QA and `README.md`
+- port in which the server is running on: 8000
+- port of the database is in .env file hidden which is:5432
 
-Before submitting, make sure that your project is complete with a `README.md`. Your `README.md` must include instructions for setting up and running your project including how you setup, run, and connect to your database. 
+```bash
+#.env
+DB_PORT=5432
+PORT=8000
+```
 
-Before submitting your project, spin it up and test each endpoint. If each one responds with data that matches the data shapes from the `REQUIREMENTS.md`, it is ready for submission!
