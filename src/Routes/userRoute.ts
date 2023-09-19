@@ -107,6 +107,7 @@ UserRouter.get('/logout',async (req:express.Request,res:express.Response)=>{
         await logout(req.cookies.username);
         res.clearCookie('jwt', { path: '/' });
         res.clearCookie('username', { path: '/' });
+        res.clearCookie('id', { path: '/' });
         res.json({
             status:200,
             data:"done"
