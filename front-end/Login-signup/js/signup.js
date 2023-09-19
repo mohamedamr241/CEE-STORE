@@ -32,7 +32,12 @@ $(function(){
         }
     });
 });
-
+const err = document.getElementById('err');
+if(err != null){
+    setTimeout(function() {
+        err.remove()
+    }, 4000);
+}
 const postData = async(url='',data={})=>{
     const res = await fetch(url,{
         method: 'POST', 
@@ -81,4 +86,3 @@ const getdata = async(url='')=>{
         console.log(`error while adding cart in front-end: ${err}`);
     }
 }
- 

@@ -19,7 +19,7 @@ export const getData = async()=>{
     return userData;
 }
 /*                       ## CLIENT LOGIN/SIGNUP ##                                     */
-export const createClientUser = async (firstName:string, lastName:string, password:string,username:string,email:string):Promise<user> =>{
+export const createClientUser = async (firstName:string, lastName:string, password:string,username:string,email:string):Promise<user|null> =>{
     try{
         const hashedPassword = hashThePass(password);
         let userModelClass:userModel = new userModel();

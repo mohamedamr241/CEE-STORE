@@ -11,6 +11,7 @@
       type="image/x-icon"
       sizes="128x128"
     />
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
     <link
       rel="stylesheet"
@@ -21,6 +22,9 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <% if (message && message.length > 0) { %>
+    <div class="alert alert-danger" id="err"><%= message %></div>
+    <% } %>
     <div class="main">
       <section class="signup">
         <div class="container">
@@ -109,6 +113,17 @@
               </div>
               <div id="status"></div>
             </form>
+            <div class="google-btn">
+              <a href="http://localhost:8000/auth/google/signup">
+                <div class="google-icon-wrapper">
+                  <img
+                    class="google-icon"
+                    src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                  />
+                </div>
+                <p class="btn-text"><b>Sign up with Google</b></p>
+              </a>
+            </div>
             <p class="loginhere">
               Have already an account ?
               <a href="http://localhost:8000/main/login" class="loginhere-link"

@@ -9,7 +9,8 @@ FrontRouterAuth.use(express.static(path.join(__dirname, "../../front-end/Login-s
 
 FrontRouterAuth.get('/login',(req:express.Request,res:express.Response)=>{
     try{
-        res.render('login');
+        const message = req.flash('failed');
+        res.render('login',{message:message[0]});
     }
     catch(err){
         res.status(404).send('login page is not found');
@@ -17,7 +18,9 @@ FrontRouterAuth.get('/login',(req:express.Request,res:express.Response)=>{
 });
 FrontRouterAuth.get('/signup',(req:express.Request,res:express.Response)=>{
     try{
-        res.render('signup');
+        const message = req.flash('failed');
+        res.render('signup',{message:message[0]});
+         
     }
     catch(err){
         res.status(404).send('signup page is not found');

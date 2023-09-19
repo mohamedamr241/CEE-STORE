@@ -13,16 +13,49 @@ let obj={
   id:''
 };
 passport.use(
-    new GoogleStrategy(
-      {
-        clientID: (process.env.GOOGLE_CLIENT_ID as string),
-        clientSecret: (process.env.GOOGLE_CLIENT_SECRET as string),
-        callbackURL: "http://localhost:8000/auth/google/redirect",
-      },
-      async (accessToken: any, refreshToken: any, profile: any, done: any) => {
+  'google-signup',
+  new GoogleStrategy(
+    {
+      clientID: (process.env.GOOGLE_CLIENT_ID_SIGN_UP as string),
+      clientSecret: (process.env.GOOGLE_CLIENT_SECRET_SIGN_UP as string),
+      callbackURL: 'http://localhost:8000/auth/google/signup/callback', // Adjust this to your callback URL for sign-up
+    },
+    async (accessToken, refreshToken, profile:any, done) => {
+          const email = profile.emails[0].value;
+          const firstName = profile.name.givenName;
+          const lastName = profile.name.familyName;
+          const parts = email.split('@');
+          const username = parts[0];
+          const demopassword = (profile.id+profile.displayName);
+          const password = demopassword.replace(/\s/g, '');
+          const signupuser = await createClientUser(firstName,lastName,password,username,email);
+          if(signupuser!= null){
+            const cart = await addCart(signupuser.id);
+            const result2 = await loginClientUser(username,password);
+            obj = {
+              refreshtoken: (result2.refreshToke as string),
+              username: (result2.username as string),
+              id: (result2.id as unknown as string)
+            }
+            saveData(obj);
+            done(null,profile,{message:'hello'});
+          }
+          else{
+            done(null,profile,{message:'account already exist'});
+          }
+    }
+  )
+);
+passport.use(
+  'google-signin',
+  new GoogleStrategy(
+    {
+      clientID: (process.env.GOOGLE_CLIENT_ID_SIGN_IN as string),
+      clientSecret: (process.env.GOOGLE_CLIENT_SECRET_SIGN_IN as string),
+      callbackURL: 'http://localhost:8000/auth/google/signin/callback', // Adjust this to your callback URL for sign-in
+    },
+    async (accessToken:any, refreshToken:any, profile:any, done:any) => {
         const email = profile.emails[0].value;
-        const firstName = profile.name.givenName;
-        const lastName = profile.name.familyName;
         const parts = email.split('@');
         const username = parts[0];
         const demopassword = (profile.id+profile.displayName);
@@ -30,15 +63,8 @@ passport.use(
 
         const result = await loginClientUser(username,password);
         if(result.status== "login failed"){
-          const signupuser = await createClientUser(firstName,lastName,password,username,email);
-          const cart = await addCart(signupuser.id);
-          const result2 = await loginClientUser(username,password);
-          obj = {
-            refreshtoken: (result2.refreshToke as string),
-            username: (result2.username as string),
-            id: (result2.id as unknown as string)
-          }
-          saveData(obj);
+          console.log('hello');
+          return done(null, profile, { message: 'Login failed. Please try again.' }); 
         }
         else{
           obj = {
@@ -47,13 +73,11 @@ passport.use(
             id: (result.id as unknown as string)
           }
           saveData(obj);
+          done(null,profile,{message:'hello'});
         }
-        
-        done(null,profile);
-      }
-    )
+    }
+  )
 );
-export default obj;
 passport.serializeUser((user:any,done)=>{
     done(null,user.displayName);
 })

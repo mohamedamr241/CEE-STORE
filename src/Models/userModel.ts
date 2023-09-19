@@ -2,13 +2,20 @@ import client from "../Utils/database";
 import {user,userData} from '../Types/userType';
 import logging from "../Utils/logger";
 export class userModel {
-    async create(firstName:string ,lastName:string ,password:string,username:string,email:string  ):Promise<user>{
+    async create(firstName:string ,lastName:string ,password:string,username:string,email:string  ):Promise<user|null>{
         try{
             const conn = await client.connect();
-            const sql = 'INSERT INTO Users (username,firstname,email,lastname,password) VALUES ($1,$2,$3,$4,$5) RETURNING *';
-            const result = await conn.query(sql, [username,firstName,email,lastName,password]);
-            conn.release;
-            return result.rows[0];
+            const sql1 = 'SELECT username from users WHERE username=($1) or email=($2)';
+            const result1 = await conn.query(sql1, [username,email]);
+            if(typeof result1.rows[0] === 'undefined'){
+                const sql = 'INSERT INTO Users (username,firstname,email,lastname,password) VALUES ($1,$2,$3,$4,$5) RETURNING *';
+                const result = await conn.query(sql, [username,firstName,email,lastName,password]);
+                conn.release;
+                return result.rows[0];
+            }
+            else{
+                return null;
+            }
         }
         catch(err){
             throw new Error(`user creation error in Models: ${err}`);

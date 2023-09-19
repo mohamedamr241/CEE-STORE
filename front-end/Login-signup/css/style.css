@@ -145,7 +145,8 @@ body {
   -o-background-size: cover;
   -ms-background-size: cover;
   background-position: center center;
-  padding: 115px 0; }
+  /* padding: 115px 0;  */
+}
 
 .container {
   width: 660px;
@@ -198,7 +199,10 @@ body {
 .form-group {
   overflow: hidden;
   margin-bottom: 20px; }
-
+.main{
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
 .form-input {
   width: 100%;
   border: 1px solid #ebebeb;
@@ -421,4 +425,10 @@ input[type=checkbox]:not(old):checked + label > span:before {
 }
 .google-btn:active {
   background: #1669f2;
+}
+#err{
+  top: 0; /* Position at the top of the viewport */
+  left: 0; /* Position at the left of the viewport */
+  right: 0; /* Position at the right of the viewport */
+  z-index: 999; /* Adjust the z-index as needed */
 }

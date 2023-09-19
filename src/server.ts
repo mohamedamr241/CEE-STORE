@@ -17,6 +17,7 @@ import './Utils/google';
 import googleRouter from './Routes/googleSignRoute';
 import passport from 'passport';
 import session from "express-session";
+import flash from 'express-flash';
 
 const app:express.Application = express();
 const port:number = 8000;
@@ -25,14 +26,15 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ limit: '10mb', extended: true  }));
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(cookieParser());
+app.use(flash());
 app.use(
   session({
-    secret: "your-secret-key", // Change this to a secret key for session encryption
+    secret: "your-secret-key", 
   })
 );
 app.use(passport.initialize());
 app.use(passport.session());
-// start cors
+
 
 app.use('/main',FrontRouter);
 app.use('/admin',FrontAdminRouter);
